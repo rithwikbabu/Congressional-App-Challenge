@@ -9,6 +9,12 @@ class Datasource {
         return listOf<recycledata>(
             //remember to include empty string if no text is needed
             //Strings are in strings.xml and drawables/images are in resourcemanager
+            recycledata(R.string.Title, R.drawable.dietcentrallogo),
+            recycledata(R.string.Title, R.drawable.dietcentrallogo),
+            recycledata(R.string.Title, R.drawable.dietcentrallogo),
+            recycledata(R.string.Title, R.drawable.dietcentrallogo),
+            recycledata(R.string.Title, R.drawable.dietcentrallogo),
+            recycledata(R.string.Title, R.drawable.dietcentrallogo),
             recycledata(R.string.Title, R.drawable.dietcentrallogo)
         )
     }
