@@ -4,8 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dietcentral.adapter.ItemAdapter
-import com.example.dietcentral.data.Datasource
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -15,14 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
         val firstFragment=HomeFragment()
         val secondFragment=InfoFragment()
         val thirdFragment=DietFragment()
-
-
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
