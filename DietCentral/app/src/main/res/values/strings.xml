@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Diet Central</string>
 <string name="Title"></string>
+    <string name="home">Home</string>
+    <string name="info">Info</string>
+    <string name="diet">Diet</string>
 </resources>
