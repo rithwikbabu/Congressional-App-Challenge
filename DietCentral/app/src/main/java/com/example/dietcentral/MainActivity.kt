@@ -1,9 +1,12 @@
 package com.example.dietcentral
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -18,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         val thirdFragment=DietFragment()
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
+        val info = findViewById<View>(R.id.infolayout)
         setCurrentFragment(firstFragment)
-
+        bottomNav.selectedItemId = R.id.nav_home;
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.nav_home->setCurrentFragment(firstFragment)
@@ -31,6 +34,11 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        val button = findViewById<Button>(R.id.plant_based_diets)
+        button.setOnClickListener {
+            setCurrentFragment(thirdFragment)
+        }
+
     }
 
     private fun setCurrentFragment(fragment:Fragment)=
@@ -38,5 +46,6 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.fragment_container,fragment)
             commit()
         }
+
 
 }
