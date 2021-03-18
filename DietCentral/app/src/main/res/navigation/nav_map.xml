@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_map"
+    app:startDestination="@id/infoFragment">
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.dietcentral.InfoFragment"
+        android:label="InfoFragment" />
+    <fragment
+        android:id="@+id/diet_12"
+        android:name="com.example.dietcentral.diet_1"
+        android:label="fragment_diet_1"
+        tools:layout="@layout/fragment_diet_1" >
+        <action
+            android:id="@+id/action_diet_12_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+</navigation>
