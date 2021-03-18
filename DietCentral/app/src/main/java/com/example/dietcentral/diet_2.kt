@@ -9,14 +9,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dietcentral.R
 import com.example.dietcentral.adapter.RecyclerAdapter
-import kotlinx.android.synthetic.main.fragment_diet_1.*
 import kotlinx.android.synthetic.main.fragment_diet_2.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class diet_1 : Fragment() {
+class diet_2 : Fragment() {
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
@@ -26,12 +25,12 @@ class diet_1 : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_diet_1, container, false)
+        return inflater.inflate(R.layout.fragment_diet_2, container, false)
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-        rcv1.apply {
+        rcv2.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
             layoutManager = LinearLayoutManager(activity)

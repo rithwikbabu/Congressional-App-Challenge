@@ -29,7 +29,7 @@
         tools:layout_editor_absoluteX="114dp" />
 
     <Button
-        android:id="@+id/Low_carb_diets"
+        android:id="@+id/low_carb_diets"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/low_carb_diets"

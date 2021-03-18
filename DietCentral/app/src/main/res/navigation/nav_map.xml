@@ -13,9 +13,40 @@
         android:id="@+id/diet_12"
         android:name="com.example.dietcentral.diet_1"
         android:label="fragment_diet_1"
-        tools:layout="@layout/fragment_diet_1" >
-        <action
-            android:id="@+id/action_diet_12_to_infoFragment"
-            app:destination="@id/infoFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_diet_1" />
+    <fragment
+        android:id="@+id/diet_2"
+        android:name="com.example.dietcentral.diet_2"
+        android:label="fragment_diet_2"
+        tools:layout="@layout/fragment_diet_2" />
+    <fragment
+        android:id="@+id/diet_3"
+        android:name="com.example.dietcentral.diet_3"
+        android:label="fragment_diet_3"
+        tools:layout="@layout/fragment_diet_3" />
+    <fragment
+        android:id="@+id/diet_4"
+        android:name="com.example.dietcentral.diet_4"
+        android:label="fragment_diet_4"
+        tools:layout="@layout/fragment_diet_4" />
+    <fragment
+        android:id="@+id/diet_5"
+        android:name="com.example.dietcentral.diet_5"
+        android:label="fragment_diet_5"
+        tools:layout="@layout/fragment_diet_5" />
+    <fragment
+        android:id="@+id/diet_6"
+        android:name="com.example.dietcentral.diet_6"
+        android:label="fragment_diet_6"
+        tools:layout="@layout/fragment_diet_6" />
+    <fragment
+        android:id="@+id/diet_7"
+        android:name="com.example.dietcentral.diet_7"
+        android:label="fragment_diet_7"
+        tools:layout="@layout/fragment_diet_7" />
+    <fragment
+        android:id="@+id/diet_8"
+        android:name="com.example.dietcentral.diet_8"
+        android:label="fragment_diet_8"
+        tools:layout="@layout/fragment_diet_8" />
 </navigation>
