@@ -12,5 +12,12 @@
     <string name="the_mediterranean_diet">Mediterranean diet</string>
     <string name="the_dash_diet">The DASH diet</string>
     <string name="the_keto_diet">The Keto diet</string>
+    <string name="plant_based_diets1">Plant-based</string>
+    <string name="low_carb_diets1">Low-carb</string>
+    <string name="the_paleo_diet1">Paleo</string>
+    <string name="low_fat_diets1">Low-fat</string>
+    <string name="the_mediterranean_diet1">Mediterranean</string>
+    <string name="the_dash_diet1">DASH</string>
+    <string name="the_keto_diet1">Keto</string>
     <string name="diet_info_text">Information on Diets</string>
 </resources>

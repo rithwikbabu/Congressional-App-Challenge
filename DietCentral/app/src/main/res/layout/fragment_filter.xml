@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:clickable="true"
+        app:chipSpacingHorizontal="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Vegan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vegan" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Vegetarian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vegetarian" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Gluten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gluten-Free" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Seafood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seafood-Free" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Dairy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dairy-Free" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Soy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soy-Free" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Peanut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peanut-Free" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Wheat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wheat-Free" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:chipSpacingHorizontal="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+
+        app:singleSelection="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:selectionRequired="true"
+        app:checkedChip="@id/chipGroup1">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/fastingchip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intermittent_fasting" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/ketochip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_keto_diet1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lowfatchip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low_fat_diets1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lowcarbchip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low_carb_diets1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/plantbasedchip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plant_based_diets1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/paleochip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_paleo_diet1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/mediterraneanchip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_mediterranean_diet1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dashchip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_dash_diet1" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Choose a Diet"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Choose Allergies"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
