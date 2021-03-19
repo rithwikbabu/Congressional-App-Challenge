@@ -9,20 +9,8 @@
     <string name="low_carb_diets">Low-carb diets</string>
     <string name="the_paleo_diet">The Paleo diet</string>
     <string name="low_fat_diets">Low-fat diets</string>
-    <string name="the_mediterranean_diet">The Mediterranean diet</string>
+    <string name="the_mediterranean_diet">Mediterranean diet</string>
     <string name="the_dash_diet">The DASH diet</string>
     <string name="the_keto_diet">The Keto diet</string>
     <string name="diet_info_text">Information on Diets</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="intermittentfasting_info_1">Intermittent fasting is a dietary strategy that cycles between periods of fasting and eating.</string>
-    <string name="intermittentfasting_info_2">Various forms exist, including the 16/8 method, which involves limiting your calorie intake to 8 hours per day, and the 5:2 method, which restricts your daily calorie intake to 500–600 calories twice per week.</string>
-    <string name="intermittentfasting_info_3">How it works: Intermittent fasting restricts the time you’re allowed to eat, which is a simple way to reduce your calorie intake. This can lead to weight loss — unless you compensate by eating too much food during allowed eating periods.</string>
-    <string name="intermittentfasting_info_4">Weight loss: In a review of studies, intermittent fasting was shown to cause 3–8% weight loss over 3–24 weeks, which is a significantly greater percentage than other methods.</string>
-    <string name="intermittentfasting_info_5">The same review showed that this way of eating may reduce waist circumference by 4–7%, which is a marker for harmful belly fat.</string>
-    <string name="intermittentfasting_info_6">Other studies found that intermittent fasting can increase fat burning while preserving muscle mass, which can improve metabolism.</string>
-    <string name="intermittentfasting_info_7">Other benefits: Intermittent fasting has been linked to anti-aging effects, increased insulin sensitivity, improved brain health, reduced inflammation, and many other benefits.</string>
-    <string name="intermittentfasting_info_8">Downsides: In general, intermittent fasting is safe for most healthy adults.</string>
-    <string name="intermittentfasting_info_9">That said, those sensitive to drops in their blood sugar levels, such as some people with diabetes, low weight, or an eating disorder, as well as pregnant or breastfeeding women, should talk to a health professional before starting intermittent fasting.</string>
 </resources>

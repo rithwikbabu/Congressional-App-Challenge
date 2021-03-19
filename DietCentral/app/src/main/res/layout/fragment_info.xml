@@ -6,92 +6,296 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--    TV1-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/intermittent_fasting"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gguideline5"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/intermittent_fasting_button"
+        app:layout_constraintTop_toTopOf="@+id/gguideline3"
+        app:srcCompat="@drawable/fastingicon"
+        app:tint="@color/white" />
+
+    <!--    TV2-->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/plant_based_diets"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gguideline5"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2" />
+
+    <ImageView
+        android:id="@+id/vimageView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/gguideline3"
+        app:srcCompat="@drawable/planticon"
+        app:tint="@color/white" />
+
+    <!--    TV3-->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/the_mediterranean_diet"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gguideline11"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2" />
+
+    <ImageView
+        android:id="@+id/vimageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/gguideline10"
+        app:srcCompat="@drawable/mediterranianicon"
+        app:tint="@color/white" />
+
+    <!--    TV4-->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/low_carb_diets"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gguideline11"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/intermittent_fasting_button"
+        app:layout_constraintTop_toTopOf="@+id/gguideline10"
+        app:srcCompat="@drawable/lowcarbicon"
+        app:tint="@color/white" />
+
+    <!--    TV5-->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/low_fat_diets"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/intermittent_fasting_button"
+        app:layout_constraintTop_toTopOf="@+id/gguideline12"
+        app:srcCompat="@drawable/lowfaticon"
+        app:tint="@color/white" />
+
+    <!--    TV6-->
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/the_paleo_diet"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/gguideline12"
+        app:srcCompat="@drawable/paleoicon"
+        app:tint="@color/white" />
+
+    <!--    TV7-->
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/the_dash_diet"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gguideline14"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/intermittent_fasting_button"
+        app:layout_constraintTop_toTopOf="@+id/gguideline13"
+        app:layout_constraintVertical_bias="0.39"
+        app:srcCompat="@drawable/dashicon"
+        app:tint="@color/white" />
+
+    <!--    TV8-->
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/the_keto_diet"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gguideline14"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/gguideline13"
+        app:srcCompat="@drawable/ketoicon"
+        app:tint="@color/white" />
+
     <Button
         android:id="@+id/intermittent_fasting_button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/intermittent_fasting"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        tools:layout_editor_absoluteX="99dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+    <!--        android:text="@string/intermittent_fasting"-->
 
     <Button
         android:id="@+id/plant_based_diets"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/plant_based_diets"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        tools:layout_editor_absoluteX="114dp" />
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <Button
         android:id="@+id/low_carb_diets"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/low_carb_diets"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
-        tools:layout_editor_absoluteX="126dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <Button
         android:id="@+id/the_paleo_diet"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/the_paleo_diet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
-        tools:layout_editor_absoluteX="129dp" />
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
         android:id="@+id/low_fat_diets"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/low_fat_diets"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
-        tools:layout_editor_absoluteX="133dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/the_mediterranean_diet"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/the_mediterranean_diet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline6"
-        tools:layout_editor_absoluteX="89dp" />
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <Button
         android:id="@+id/the_DASH_diet"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/the_dash_diet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline9"
-        tools:layout_editor_absoluteX="133dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/vguideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <Button
         android:id="@+id/the_keto_diet"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/the_keto_diet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintEnd_toStartOf="@+id/vguideline1"
+        app:layout_constraintStart_toStartOf="@+id/vguideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -101,11 +305,18 @@
         app:layout_constraintGuide_percent=".1" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/gguideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".2" />
+        app:layout_constraintGuide_percent=".125" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gguideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".275" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -115,11 +326,18 @@
         app:layout_constraintGuide_percent=".3" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
+        android:id="@+id/gguideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".4" />
+        app:layout_constraintGuide_percent=".325" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gguideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".475" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -129,11 +347,18 @@
         app:layout_constraintGuide_percent=".5" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/gguideline12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".6" />
+        app:layout_constraintGuide_percent=".525" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".675" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -143,11 +368,18 @@
         app:layout_constraintGuide_percent=".7" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/gguideline13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".8" />
+        app:layout_constraintGuide_percent=".725" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gguideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".875" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
@@ -166,4 +398,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".525" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vguideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".475" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
