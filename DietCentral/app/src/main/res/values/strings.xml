@@ -20,4 +20,14 @@
     <string name="the_dash_diet1">DASH</string>
     <string name="the_keto_diet1">Keto</string>
     <string name="diet_info_text">Information on Diets</string>
+    <string name="vegan">Vegan</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="gluten_free">Gluten-Free</string>
+    <string name="seafood_free">Seafood-Free</string>
+    <string name="dairy_free">Dairy-Free</string>
+    <string name="soy_free">Soy-Free</string>
+    <string name="peanut_free">Peanut-Free</string>
+    <string name="wheat_free">Wheat-Free</string>
+    <string name="choose_preferences">Choose Preferences</string>
+    <string name="choose_diet">Choose a Diet</string>
 </resources>

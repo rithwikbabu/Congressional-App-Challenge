@@ -11,7 +11,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:clickable="true"
         app:chipSpacingHorizontal="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -20,51 +19,59 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Vegan"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vegan" />
+            android:text="@string/vegan" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Vegetarian"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vegetarian" />
+            android:text="@string/vegetarian" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Gluten"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gluten-Free" />
+            android:text="@string/gluten_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Seafood"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seafood-Free" />
+            android:text="@string/seafood_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Dairy"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dairy-Free" />
+            android:text="@string/dairy_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Soy"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Soy-Free" />
+            android:text="@string/soy_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Peanut"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Peanut-Free" />
+            android:text="@string/peanut_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Wheat"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wheat-Free" />
+            android:text="@string/wheat_free" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -75,61 +82,64 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:chipSpacingHorizontal="6dp"
+        app:singleSelection="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-
-        app:singleSelection="true"
-        android:clickable="true"
-        android:focusable="true"
-        app:selectionRequired="true"
-        app:checkedChip="@id/chipGroup1">
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/fastingchip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/intermittent_fasting" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/ketochip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_keto_diet1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/lowfatchip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/low_fat_diets1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/lowcarbchip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/low_carb_diets1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/plantbasedchip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plant_based_diets1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/paleochip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_paleo_diet1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/mediterraneanchip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_mediterranean_diet1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/dashchip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_dash_diet1" />
@@ -142,7 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-light"
-        android:text="Choose a Diet"
+        android:text="@string/choose_diet"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +164,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-light"
-        android:text="Choose Allergies"
+        android:text="@string/choose_preferences"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
