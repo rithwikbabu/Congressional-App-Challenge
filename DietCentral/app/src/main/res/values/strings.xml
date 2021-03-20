@@ -30,4 +30,5 @@
     <string name="wheat_free">Wheat-Free</string>
     <string name="choose_preferences">Choose Preferences</string>
     <string name="choose_diet">Choose a Diet</string>
+    <string name="none">None</string>
 </resources>
