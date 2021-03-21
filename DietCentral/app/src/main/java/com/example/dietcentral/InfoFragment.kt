@@ -11,6 +11,11 @@ import androidx.fragment.app.FragmentTransaction
 class InfoFragment : Fragment() {
     companion object {
         var idvalue = "initial value"
+
+        fun setZero() {
+            idvalue = "0"
+        }
+
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view =  inflater.inflate(R.layout.fragment_info, container, false)

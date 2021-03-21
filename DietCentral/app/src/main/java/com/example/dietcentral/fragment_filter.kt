@@ -1,6 +1,8 @@
 package com.example.dietcentral
 
 import android.R.attr.fragment
+import android.app.SearchManager
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +11,15 @@ import android.widget.Button
 import android.widget.CompoundButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.dietcentral.adapter.RecyclerAdapter
 import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipDrawable
 import com.google.android.material.chip.ChipGroup
+import kotlinx.android.synthetic.main.fragment_diet_1.*
+import kotlinx.android.synthetic.main.fragment_filter.*
+import kotlinx.coroutines.selects.select
 
 
 class fragment_filter : Fragment(){
@@ -18,6 +27,9 @@ class fragment_filter : Fragment(){
         var selectedChipData = mutableListOf<String>()
         var selectedDietData = mutableListOf<String>()
     }
+
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_filter, container, false)
@@ -100,6 +112,16 @@ class fragment_filter : Fragment(){
 
     }
 
+    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(itemView, savedInstanceState)
+        result_recycleview.apply {
+            // set a LinearLayoutManager to handle Android
+            // RecyclerView behavior
+            layoutManager = LinearLayoutManager(activity)
+            // set the custom adapter to the RecyclerView
+            adapter = RecyclerAdapter()
+        }
+    }
 
 
 

@@ -39,4 +39,5 @@ class diet_3 : Fragment() {
             adapter = RecyclerAdapter()
         }
     }
+
 }

@@ -17,11 +17,11 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:scrollbars="none"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.chip.ChipGroup
@@ -49,13 +49,30 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Filter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:padding="9dp"
+        android:adjustViewBounds="true"
+        android:background="@color/maindark"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adjust_filter"
+        android:tint="@color/white"/>
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:adjustViewBounds="true"
+        android:background="@color/maindark"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_clear_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

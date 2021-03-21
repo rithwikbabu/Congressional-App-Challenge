@@ -13,6 +13,7 @@ import com.example.dietcentral.diet_1
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     var code = mutableListOf("")
     var differention = "1"
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var itemCode: TextView
@@ -23,7 +24,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             itemView.setOnClickListener {
                 var position: Int = getAdapterPosition()
                 val context = itemView.context
-                val intent = Intent(context, diet_1::class.java).apply {
+                var intent = Intent(context, diet_1::class.java).apply {
                     putExtra("NUMBER", position)
                     putExtra("CODE", itemCode.text)
                 }
@@ -297,6 +298,14 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "A type of medication called sodium-glucose cotransporter 2 (SGLT2) inhibitors for type 2 diabetes can increase the risk for diabetic ketoacidosis, a dangerous condition that increases blood acidity. Anyone taking this medication should avoid the keto diet (40Trusted Source, 41Trusted Source).\n" +
                     "\n" +
                     "More research is being done to determine the safety of the keto diet in the long term. Keep your doctor informed of your eating plan to guide your choices.")
+        } else if(differention == "0"){
+            code.add("")
+            code.add("")
+            code.add("")
+            code.add("")
+            code.add("")
+            code.add("")
+            code.add("")
         }
     }
 }

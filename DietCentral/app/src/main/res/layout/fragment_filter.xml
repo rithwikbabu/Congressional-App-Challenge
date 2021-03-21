@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,21 +16,25 @@
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup3"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             app:chipSpacing="8dp"
-            app:singleSelection="true" />
+            app:singleSelection="false" />
     </HorizontalScrollView>
 
     <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup2"
@@ -46,56 +49,56 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Vegan"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/vegan" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Vegetarian"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/vegetarian" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Gluten"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gluten_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Seafood"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/seafood_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Dairy"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dairy_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Soy"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/soy_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Peanut"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/peanut_free" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/Wheat"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wheat_free" />
@@ -109,64 +112,64 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:chipSpacingHorizontal="6dp"
-        app:singleSelection="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11">
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/fastingchip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/intermittent_fasting" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/ketochip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_keto_diet1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/lowfatchip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/low_fat_diets1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/lowcarbchip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/low_carb_diets1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/plantbasedchip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plant_based_diets1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/paleochip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_paleo_diet1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/mediterraneanchip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_mediterranean_diet1" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/dashchip"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/the_dash_diet1" />
@@ -177,13 +180,11 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/choose_diet"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/chipGroup1"
+        app:layout_constraintTop_toBottomOf="@+id/result_recycleview" />
 
     <TextView
         android:id="@+id/textView12"
@@ -193,9 +194,7 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/choose_preferences"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chipGroup2"
         app:layout_constraintTop_toBottomOf="@+id/chipGroup1" />
 
     <Button
@@ -206,5 +205,38 @@
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="683dp" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_ingredients_to_remove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:queryHint="@string/search_ingredients" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result_recycleview"
+        android:layout_width="0dp"
+        android:layout_height="175dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
