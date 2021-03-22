@@ -41,7 +41,16 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="@+id/result_recycleview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/result_recycleview" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/backbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -193,7 +202,7 @@
         android:text="@string/choose_diet"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/chipGroup1"
-        app:layout_constraintTop_toBottomOf="@+id/result_recycleview" />
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
     <TextView
         android:id="@+id/textView12"
@@ -222,24 +231,14 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="683dp" />
 
-    <SearchView
-        android:id="@+id/searchView1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="@string/search_ingredients_to_remove"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:queryHint="@string/search_ingredients" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/result_recycleview"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/backbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -247,5 +246,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/choose_ingredients"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/chipGroup2"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup2" />
+
+    <Button
+        android:id="@+id/ingredients_button"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="1dp"
+        android:padding="0dp"
+        android:text="+Add"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/result_recycleview"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

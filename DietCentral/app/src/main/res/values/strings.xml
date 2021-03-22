@@ -35,4 +35,5 @@
     <string name="search_hint">Search Ingredients</string>
     <string name="search_ingredients_to_remove">Search Ingredients to Remove</string>
     <string name="search_ingredients">Search Ingredients</string>
+    <string name="choose_ingredients">Choose Ingredients</string>
 </resources>

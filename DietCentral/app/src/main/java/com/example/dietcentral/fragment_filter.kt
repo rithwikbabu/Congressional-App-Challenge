@@ -1,13 +1,11 @@
 package com.example.dietcentral
 
+import android.R.attr.data
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CompoundButton
-import android.widget.SearchView
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +14,7 @@ import com.example.dietcentral.adapter2.RecyclerAdapter
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.fragment_filter.*
+import org.w3c.dom.Text
 
 
 class fragment_filter : Fragment(){
@@ -104,28 +103,11 @@ class fragment_filter : Fragment(){
             FragTan.commit()
         }
 
-        val tv11 = view.findViewById<TextView>(R.id.textView11)
-        val ingredients = mutableListOf<String>()
-        ingredients.addAll(RecyclerAdapter.code)
-        view.findViewById<SearchView>(R.id.searchView1)?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                RecyclerAdapter.code.clear()
-                adapter?.notifyItemRangeRemoved(0, 29)
+        val b2 = view.findViewById<Button>(R.id.ingredients_button)
 
-                if(ingredients.contains(query)){
-                    if (query != null) {
-                        RecyclerAdapter.code.add(query)
-                        adapter?.notifyItemInserted(0)
-                        tv11.text = query
-                    }
-                }
-                return true
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                return true
-            }
-        })
+        b2?.setOnClickListener {
+            updateChip()
+        }
 
         return view
 
@@ -142,7 +124,5 @@ class fragment_filter : Fragment(){
             adapter = com.example.dietcentral.adapter2.RecyclerAdapter()
         }
     }
-
-
 
 }
