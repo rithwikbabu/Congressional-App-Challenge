@@ -8,8 +8,12 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.dietcentral.adapter3.RecyclerAdapter
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import kotlinx.android.synthetic.main.fragment_diet.*
+import kotlinx.android.synthetic.main.fragment_diet_7.*
 
 class DietFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -54,6 +58,17 @@ class DietFragment : Fragment() {
         }
 
         return view
+    }
+
+    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(itemView, savedInstanceState)
+        dietsrcv.apply {
+            // set a LinearLayoutManager to handle Android
+            // RecyclerView behavior
+            layoutManager = LinearLayoutManager(activity)
+            // set the custom adapter to the RecyclerView
+            adapter = RecyclerAdapter()
+        }
     }
 
 
