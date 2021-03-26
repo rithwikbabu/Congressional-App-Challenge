@@ -12,7 +12,6 @@ import com.example.dietcentral.diet_1
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     var code = mutableListOf("")
-    var differention = "1"
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -49,14 +48,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         viewHolder.itemCode.text = code[i]
     }
 
-    fun setAct(){
-        differention = InfoFragment.idvalue
-    }
-
     fun getText(){
-        setAct()
+
         code.clear()
-        if (differention == "1"){
+        if (InfoFragment.idvalue == "1"){
             code.add(0, "Intermittent fasting is a dietary strategy that cycles between periods of fasting and eating.\n" +
                     "\n" +
                     "Various forms exist, including the 16/8 method, which involves limiting your calorie intake to 8 hours per day, and the 5:2 method, which restricts your daily calorie intake to 500–600 calories twice per week.\n" +
@@ -74,7 +69,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Downsides: In general, intermittent fasting is safe for most healthy adults.\n" +
                     "\n" +
                     "That said, those sensitive to drops in their blood sugar levels, such as some people with diabetes, low weight, or an eating disorder, as well as pregnant or breastfeeding women, should talk to a health professional before starting intermittent fasting.")
-        } else if (differention == "2"){
+        } else if (InfoFragment.idvalue == "2"){
             code.add(0,"Plant-based diets may help you lose weight. Vegetarianism and veganism are the most popular versions, which restrict animal products for health, ethical, and environmental reasons.\n" +
                     "\n" +
                     "However, more flexible plant-based diets also exist, such as the flexitarian diet, which is a plant-based diet that allows eating animal products in moderation.\n" +
@@ -100,7 +95,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Downsides: Though plant-based diets are healthy, they can restrict important nutrients that are typically found in animal products, such as iron, vitamin B12, vitamin D, calcium, zinc, and omega-3 fatty acids.\n" +
                     "\n" +
                     "A flexitarian approach or proper supplementation can help account for these nutrients.")
-        } else if (differention == "3"){
+        } else if (InfoFragment.idvalue == "3"){
             code.add(0, "Low-carb diets are among the most popular diets for weight loss. Examples include the Atkins diet, ketogenic (keto) diet, and low-carb, high-fat (LCHF) diet.\n" +
                     "\n" +
                     "Some varieties reduce carbs more drastically than others. For instance, very-low-carb diets like the keto diet restrict this macronutrient to under 10% of total calories, compared with 30% or less for other types (18Trusted Source).\n" +
@@ -122,7 +117,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Downsides: In some cases, a low-carb diet may raise LDL (bad) cholesterol levels. Very-low-carb diets can also be difficult to follow and cause digestive upset in some people (31Trusted Source).\n" +
                     "\n" +
                     "In very rare situations, following a very-low-carb diet may cause a condition known as ketoacidosis, a dangerous metabolic condition that can be fatal if left untreated (32Trusted Source, 33Trusted Source).")
-        } else if (differention == "4"){
+        } else if (InfoFragment.idvalue == "4"){
             code.add(0, "The Mediterranean diet is based on foods that people in countries like Italy and Greece used to eat.\n" +
                     "\n" +
                     "Though it was designed to lower heart disease risk, numerous studies indicate that it can also aid weight loss (53Trusted Source).\n" +
@@ -140,7 +135,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Other benefits: The Mediterranean diet encourages eating plenty of antioxidant-rich foods, which may help combat inflammation and oxidative stress by neutralizing free radicals. It has been linked to reduced risks of heart disease and premature death (55Trusted Source, 56Trusted Source).\n" +
                     "\n" +
                     "Downsides: As the Mediterranean diet is not strictly a weight loss diet, people may not lose weight following it unless they also consume fewer calories.")
-        } else if (differention == "5"){
+        } else if (InfoFragment.idvalue == "5"){
             code.add(0, "Like low-carb diets, low-fat diets have been popular for decades.\n" +
                     "\n" +
                     "In general, a low-fat diet involves restricting your fat intake to 30% of your daily calories.\n" +
@@ -164,7 +159,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Other benefits: Low-fat diets have been linked to a reduced risk of heart disease and stroke. They may also reduce inflammation and improve markers of diabetes (49Trusted Source, 50Trusted Source, 51Trusted Source).\n" +
                     "\n" +
                     "Downsides: Restricting fat too much can lead to health problems in the long term, as fat plays a key role in hormone production, nutrient absorption, and cell health. Moreover, very-low-fat diets have been linked to a higher risk of metabolic syndrome (52Trusted Source).")
-        } else if (differention == "6"){
+        } else if (InfoFragment.idvalue == "6"){
             code.add(0, "The paleo diet advocates eating the same foods that your hunter-gatherer ancestors allegedly ate.\n" +
                     "\n" +
                     "It’s based on the theory that modern diseases are linked to the Western diet, as proponents believe that the human body hasn’t evolved to process legumes, grains, and dairy.\n" +
@@ -180,7 +175,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Other benefits: Following the paleo diet may reduce several heart disease risk factors, such as high blood pressure, cholesterol, and triglyceride levels (40Trusted Source, 41Trusted Source).\n" +
                     "\n" +
                     "Downsides: Though the paleo diet is healthy, it restricts several nutritious food groups, including legumes, whole grains, and dairy.")
-        } else if (differention == "7"){
+        } else if (InfoFragment.idvalue == "7"){
             code.add(0, "Dietary Approaches to Stop Hypertension, or DASH diet, is an eating plan that is designed to help treat or prevent high blood pressure, which is clinically known as hypertension.\n" +
                     "\n" +
                     "It emphasizes eating plenty of fruits, vegetables, whole grains, and lean meats and is low in salt, red meat, added sugars, and fat.\n" +
@@ -200,7 +195,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "Other benefits: The DASH diet has been shown to reduce blood pressure levels and several heart disease risk factors. Also, it may help combat recurrent depressive symptoms and lower your risk of breast and colorectal cancer (71Trusted Source, 72Trusted Source, 73Trusted Source, 74Trusted Source, 75Trusted Source, 76Trusted Source).\n" +
                     "\n" +
                     "Downsides: While the DASH diet may aid weight loss, there is mixed evidence on salt intake and blood pressure. In addition, eating too little salt has been linked to increased insulin resistance and an increased risk of death in people with heart failure (77Trusted Source, 78Trusted Source).")
-        } else if (differention == "8"){
+        } else if (InfoFragment.idvalue == "8"){
             code.add(0, "The ketogenic diet is a very low carb, high fat diet that shares many similarities with the Atkins and low carb diets.\n" +
                     "\n" +
                     "It involves drastically reducing carbohydrate intake and replacing it with fat. This reduction in carbs puts your body into a metabolic state called ketosis.\n" +
@@ -298,7 +293,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     "A type of medication called sodium-glucose cotransporter 2 (SGLT2) inhibitors for type 2 diabetes can increase the risk for diabetic ketoacidosis, a dangerous condition that increases blood acidity. Anyone taking this medication should avoid the keto diet (40Trusted Source, 41Trusted Source).\n" +
                     "\n" +
                     "More research is being done to determine the safety of the keto diet in the long term. Keep your doctor informed of your eating plan to guide your choices.")
-        } else if(differention == "0"){
+        } else if(InfoFragment.idvalue == "0"){
             code.add("")
             code.add("")
             code.add("")

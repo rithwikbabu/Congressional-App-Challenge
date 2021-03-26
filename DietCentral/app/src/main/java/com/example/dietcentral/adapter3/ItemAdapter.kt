@@ -16,8 +16,8 @@ import com.example.dietcentral.fragment_filter
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     companion object {
-        var lbname = mutableListOf("1","3","5")
-        var rbname = mutableListOf("2","4","6")
+        var lbname = mutableListOf("1","3","5","7","9")
+        var rbname = mutableListOf("2","4","6","8","10")
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -59,7 +59,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         //viewHolder.setIsRecyclable(false);
         viewHolder.leftbutton.text = lbname[i]
-        viewHolder.rightbutton.text = lbname[i]
+        viewHolder.rightbutton.text = rbname[i]
     }
 }
 

@@ -44,7 +44,10 @@
             android:id="@+id/leftbutton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:alpha="0.50"
+            android:backgroundTint="@color/white"
             android:text="Button"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/leftimage"
             app:layout_constraintEnd_toEndOf="@+id/leftimage"
             app:layout_constraintStart_toStartOf="@+id/leftimage" />

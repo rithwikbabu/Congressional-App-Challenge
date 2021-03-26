@@ -34,11 +34,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-//        val button = findViewById<Button>(R.id.plant_based_diets)
-//        button.setOnClickListener {
-//            setCurrentFragment(thirdFragment)
-//        }
-
     }
 
     private fun setCurrentFragment(fragment:Fragment)=
