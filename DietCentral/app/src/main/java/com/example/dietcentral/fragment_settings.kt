@@ -3,6 +3,7 @@ package com.example.dietcentral
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -26,12 +27,14 @@ class fragment_settings : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
-
         val preferences_button = view.findViewById<Button>(R.id.preferences_button)
+
         val FragTan: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
 
+
         preferences_button?.setOnClickListener {
-            PreferencesDialogFragment().show(FragTan, "dialog")
+            FragTan.add(PreferencesDialogFragment(), "dialog");
+            FragTan.commitAllowingStateLoss();
         }
 
         return view

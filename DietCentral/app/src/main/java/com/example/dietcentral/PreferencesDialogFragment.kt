@@ -1,13 +1,14 @@
 package com.example.dietcentral
 
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.Button
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentTransaction
 
 class PreferencesDialogFragment : DialogFragment() {
 
@@ -19,7 +20,19 @@ class PreferencesDialogFragment : DialogFragment() {
             savedInstanceState: Bundle?
     ): View {
         // Inflate the layout to use as dialog or embedded fragment
-        return inflater.inflate(R.layout.fragment_preferences, container, false)
+        var view = inflater.inflate(R.layout.settings_pref, container, false)
+
+        val backbutton = view.findViewById<Button>(R.id.backbutton_pref)
+        val FragTan: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+
+        backbutton?.setOnClickListener {
+            dismiss()
+            FragTan.detach(fragment_settings())
+            FragTan.attach(fragment_settings())
+            FragTan.commit()
+            FragTan.replace(R.id.fragment_container, fragment_settings());
+        }
+        return view
     }
 
     /** The system calls this only when creating the layout in a dialog. */
