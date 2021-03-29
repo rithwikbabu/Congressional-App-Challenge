@@ -60,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/language_button"
+        android:id="@+id/toc_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="@color/white"

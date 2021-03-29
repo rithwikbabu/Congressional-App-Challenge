@@ -11,7 +11,7 @@ import android.widget.ImageButton
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
 
-class PreferencesDialogFragment : DialogFragment() {
+class TocDialogFragment : DialogFragment() {
 
     /** The system calls this to get the DialogFragment's layout, regardless
     of whether it's being displayed as a dialog or an embedded fragment. */
@@ -21,7 +21,7 @@ class PreferencesDialogFragment : DialogFragment() {
             savedInstanceState: Bundle?
     ): View {
         // Inflate the layout to use as dialog or embedded fragment
-        var view = inflater.inflate(R.layout.settings_pref, container, false)
+        var view = inflater.inflate(R.layout.settings_toc, container, false)
 
         val backbutton = view.findViewById<ImageButton>(R.id.backbutton_pref)
         val FragTan: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()

@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
-        android:text="@string/preferences"
+        android:text="@string/terms_conditions"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/backbutton_pref"
         app:layout_constraintEnd_toEndOf="@+id/textView15"

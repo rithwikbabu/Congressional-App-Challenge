@@ -28,12 +28,30 @@ class fragment_settings : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         val preferences_button = view.findViewById<Button>(R.id.preferences_button)
+        val info_button = view.findViewById<Button>(R.id.more_info_button)
+        val help_button = view.findViewById<Button>(R.id.help_button)
+        val toc_button = view.findViewById<Button>(R.id.toc_button)
 
         val FragTan: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
 
 
         preferences_button?.setOnClickListener {
             FragTan.add(PreferencesDialogFragment(), "dialog");
+            FragTan.commitAllowingStateLoss();
+        }
+
+        info_button?.setOnClickListener {
+            FragTan.add(InfoDialogFragment(), "dialog");
+            FragTan.commitAllowingStateLoss();
+        }
+
+        help_button?.setOnClickListener {
+            FragTan.add(HelpDialogFragment(), "dialog");
+            FragTan.commitAllowingStateLoss();
+        }
+
+        toc_button?.setOnClickListener {
+            FragTan.add(TocDialogFragment(), "dialog");
             FragTan.commitAllowingStateLoss();
         }
 
