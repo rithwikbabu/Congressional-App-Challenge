@@ -1,6 +1,8 @@
 package com.example.dietcentral
 
 import android.app.Dialog
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +43,15 @@ class TocDialogFragment : DialogFragment() {
             FragTan.commit()
             FragTan.replace(R.id.fragment_container, fragment_settings());
         }
+
+        val mode = context?.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
+        when (mode) {
+            Configuration.UI_MODE_NIGHT_YES -> { backbutton.setColorFilter(Color.WHITE)
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {}
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {}
+        }
+
         return view
     }
 

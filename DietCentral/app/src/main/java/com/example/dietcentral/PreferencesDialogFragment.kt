@@ -1,15 +1,23 @@
 package com.example.dietcentral
 
+import android.app.Activity
 import android.app.Dialog
+import android.content.Intent
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import android.widget.Button
+import android.widget.CompoundButton
 import android.widget.ImageButton
+import android.widget.Switch
+import androidx.core.app.ActivityCompat.recreate
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.appcompat.app.AppCompatDelegate as AppCompatDelegate1
+
 
 class PreferencesDialogFragment : DialogFragment() {
 
@@ -33,6 +41,15 @@ class PreferencesDialogFragment : DialogFragment() {
             FragTan.commit()
             FragTan.replace(R.id.fragment_container, fragment_settings());
         }
+
+        val mode = context?.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
+        when (mode) {
+            Configuration.UI_MODE_NIGHT_YES -> { backbutton.setColorFilter(Color.WHITE)
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {}
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {}
+        }
+
         return view
     }
 

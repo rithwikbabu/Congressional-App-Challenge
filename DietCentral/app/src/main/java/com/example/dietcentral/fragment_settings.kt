@@ -1,5 +1,7 @@
 package com.example.dietcentral
 
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +9,7 @@ import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,6 +34,18 @@ class fragment_settings : Fragment() {
         val info_button = view.findViewById<Button>(R.id.more_info_button)
         val help_button = view.findViewById<Button>(R.id.help_button)
         val toc_button = view.findViewById<Button>(R.id.toc_button)
+
+        val mode = context?.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
+        when (mode) {
+            Configuration.UI_MODE_NIGHT_YES -> {preferences_button.setBackgroundColor(Color.DKGRAY); info_button.setBackgroundColor(Color.DKGRAY);
+                help_button.setBackgroundColor(Color.DKGRAY); toc_button.setBackgroundColor(Color.DKGRAY)
+                                                preferences_button.setTextColor(Color.WHITE); info_button.setTextColor(Color.WHITE);
+                help_button.setTextColor(Color.WHITE); toc_button.setTextColor(Color.WHITE)
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {}
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {}
+        }
+
 
         val FragTan: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
 

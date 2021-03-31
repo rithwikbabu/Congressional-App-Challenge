@@ -1,11 +1,14 @@
 package com.example.dietcentral
 
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -55,6 +58,16 @@ class DietFragment : Fragment() {
             fragment_filter.selectedDietData.clear()
             fragment_filter.selectedChipData.clear()
             updateChip()
+        }
+
+        val mode = context?.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
+        when (mode) {
+            Configuration.UI_MODE_NIGHT_YES -> {
+                context?.let { ContextCompat.getColor(it, R.color.backgroundblack) }?.let { b1?.setBackgroundColor(it)}
+                context?.let { ContextCompat.getColor(it, R.color.backgroundblack) }?.let { b2?.setBackgroundColor(it)}
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {}
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {}
         }
 
         return view
