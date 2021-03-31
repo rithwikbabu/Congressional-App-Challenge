@@ -1,20 +1,27 @@
 package com.example.dietcentral
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
+
 
 class HelpDialogFragment : DialogFragment() {
 
     /** The system calls this to get the DialogFragment's layout, regardless
     of whether it's being displayed as a dialog or an embedded fragment. */
+
+    var mEditTextSubject: EditText? = null
+    var mEditTextDescription: EditText? = null
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -23,8 +30,16 @@ class HelpDialogFragment : DialogFragment() {
         // Inflate the layout to use as dialog or embedded fragment
         var view = inflater.inflate(R.layout.settings_help, container, false)
 
+        mEditTextSubject = view.findViewById(R.id.emailSubjText)
+        mEditTextDescription = view.findViewById(R.id.emailDescText)
+        val sendButton = view.findViewById<Button>(R.id.submit_button)
+
         val backbutton = view.findViewById<ImageButton>(R.id.backbutton_pref)
         val FragTan: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+
+        sendButton?.setOnClickListener {
+            sendMail()
+        }
 
         backbutton?.setOnClickListener {
             dismiss()
@@ -33,7 +48,23 @@ class HelpDialogFragment : DialogFragment() {
             FragTan.commit()
             FragTan.replace(R.id.fragment_container, fragment_settings());
         }
+
         return view
+    }
+
+    private fun sendMail() {
+        var recipient = arrayOf("1diet.central@gmail.com")
+
+        var subject = mEditTextSubject?.text.toString()
+        var description = mEditTextDescription?.text.toString()
+
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.putExtra(Intent.EXTRA_EMAIL, recipient)
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        intent.putExtra(Intent.EXTRA_TEXT, description)
+
+        intent.setType("message/rfc822")
+        startActivity(Intent.createChooser(intent, "Choose an email client"))
     }
 
     /** The system calls this only when creating the layout in a dialog. */
