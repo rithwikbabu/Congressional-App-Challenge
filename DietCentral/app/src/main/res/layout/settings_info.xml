@@ -35,4 +35,88 @@
         app:layout_constraintEnd_toEndOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="38dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="25dp"
+        android:text="About"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 0.1.0  Diet Central  04/01/2021"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:text="Rithwik Babu, Ryder Sitcawich, Parth Awade, Devesh Bhor"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:srcCompat="@drawable/_a86e9fa99ad4f0b9853f995010f7e5e__1___1__removebg_preview" />
+
+    <ImageView
+        android:id="@+id/fbicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/imageView13"
+        app:srcCompat="@drawable/circled_facebook_svg_128" />
+
+    <ImageView
+        android:id="@+id/igicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/inicon"
+        app:srcCompat="@drawable/circled_instagram_svg_128" />
+
+    <ImageView
+        android:id="@+id/inicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/fbicon"
+        app:srcCompat="@drawable/circled_linkedin_svg_128" />
+
+    <ImageView
+        android:id="@+id/twicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toEndOf="@+id/igicon"
+        app:srcCompat="@drawable/circled_twitter_svg_128" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

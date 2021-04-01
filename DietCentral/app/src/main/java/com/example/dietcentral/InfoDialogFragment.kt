@@ -1,17 +1,20 @@
 package com.example.dietcentral
 
 import android.app.Dialog
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
+
 
 class InfoDialogFragment : DialogFragment() {
 
@@ -35,6 +38,32 @@ class InfoDialogFragment : DialogFragment() {
             FragTan.commit()
             FragTan.replace(R.id.fragment_container, fragment_settings());
         }
+
+        val fbicon = view.findViewById<ImageView>(R.id.fbicon)
+        val inicon = view.findViewById<ImageView>(R.id.inicon)
+        val igicon = view.findViewById<ImageView>(R.id.igicon)
+        val twicon = view.findViewById<ImageView>(R.id.twicon)
+
+        fbicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/"))
+            startActivity(browserIntent)
+        }
+
+        inicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/"))
+            startActivity(browserIntent)
+        }
+
+        igicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/dietcentralapp/?hl=en"))
+            startActivity(browserIntent)
+        }
+
+        twicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/"))
+            startActivity(browserIntent)
+        }
+
 
         val mode = context?.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
         when (mode) {
