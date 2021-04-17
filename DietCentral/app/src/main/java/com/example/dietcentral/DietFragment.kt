@@ -18,7 +18,6 @@ import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.fragment_diet.*
 import kotlinx.android.synthetic.main.fragment_diet_7.*
 
-
 class DietFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view =  inflater.inflate(R.layout.fragment_diet, container, false)
