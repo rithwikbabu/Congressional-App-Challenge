@@ -79,7 +79,6 @@ class fragment_filter : Fragment(){
             }
         }
 
-        var chipfast = view.findViewById<Chip>(R.id.fastingchip); chipfast.setOnCheckedChangeListener(dietCheckedChangeListener)
         var chipketo = view.findViewById<Chip>(R.id.ketochip); chipketo.setOnCheckedChangeListener(dietCheckedChangeListener)
         var chipcarb = view.findViewById<Chip>(R.id.lowcarbchip); chipcarb.setOnCheckedChangeListener(dietCheckedChangeListener)
         var chipfat = view.findViewById<Chip>(R.id.lowfatchip); chipfat.setOnCheckedChangeListener(dietCheckedChangeListener)

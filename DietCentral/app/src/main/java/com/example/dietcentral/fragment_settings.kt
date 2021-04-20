@@ -3,12 +3,15 @@ package com.example.dietcentral
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
+import android.content.Intent
+import android.net.Uri
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -68,6 +71,31 @@ class fragment_settings : Fragment() {
         toc_button?.setOnClickListener {
             FragTan.add(TocDialogFragment(), "dialog");
             FragTan.commitAllowingStateLoss();
+        }
+
+        val fbicon = view.findViewById<ImageView>(R.id.fbicon)
+        val inicon = view.findViewById<ImageView>(R.id.inicon)
+        val igicon = view.findViewById<ImageView>(R.id.igicon)
+        val twicon = view.findViewById<ImageView>(R.id.twicon)
+
+        fbicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/"))
+            startActivity(browserIntent)
+        }
+
+        inicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/"))
+            startActivity(browserIntent)
+        }
+
+        igicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/dietcentralapp/?hl=en"))
+            startActivity(browserIntent)
+        }
+
+        twicon?.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/"))
+            startActivity(browserIntent)
         }
 
         return view
