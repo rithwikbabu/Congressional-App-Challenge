@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dietcentral.R
 import com.example.dietcentral.diet_1
 import com.example.dietcentral.fragment_filter
-
+import com.example.dietcentral.DietFragment
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     companion object {
-        var lbname = mutableListOf("1","3","5","7","9")
-        var rbname = mutableListOf("2","4","6","8","10")
+        var lbname = mutableListOf("1", "3", "5", "7", "9")
+        var rbname = mutableListOf("2", "4", "6", "8", "10")
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -27,7 +27,30 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         var leftimage: ImageButton = itemView.findViewById(R.id.leftimage)
         var rightimage: ImageButton = itemView.findViewById(R.id.rightimage)
 
+
+
         init {
+            fun splitname(){
+                if(DietFragment.nameList.size % 2 != 0){
+                    DietFragment.nameList.removeAt(DietFragment.nameList.size - 1)
+                }
+                if(lbname.size != 5){
+                    rbname.clear()
+                    lbname.clear()
+                }
+                var i = 2
+                for (name in DietFragment.nameList){
+                    if(i % 2 == 0){
+                        lbname.add(name)
+                    } else {
+                        rbname.add(name)
+                    }
+                    i = i + 1
+                }
+            }
+
+            splitname()
+            splitname()
 
             itemView.setOnClickListener {
                 var position: Int = getAdapterPosition()
@@ -51,7 +74,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return lbname.size
+        return rbname.size
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {

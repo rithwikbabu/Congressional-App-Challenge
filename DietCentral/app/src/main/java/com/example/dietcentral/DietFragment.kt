@@ -53,6 +53,8 @@ class DietFragment : Fragment() {
         var reader: BufferedReader = BufferedReader(InputStreamReader(inputStream, Charset.forName("UTF-8")))
 
         fun updateChip(){
+            imagList.clear()
+            nameList.clear()
             chipgroup.removeAllViews()
             if (fragment_filter.selectedDietData.isNotEmpty()){
                 val chip = Chip(chipgroup.context)
@@ -61,11 +63,11 @@ class DietFragment : Fragment() {
                 when (fragment_filter.selectedDietData[0]) {
                     "Keto" -> inputStream = getResources().openRawResource(R.raw.keto)
                     "Low-fat" -> inputStream = getResources().openRawResource(R.raw.lowfat)
-                    "Low-carb" -> inputStream = getResources().openRawResource(R.raw.lowcarbs)
-                    "Plant-based" -> inputStream = getResources().openRawResource(R.raw.plantbased)
+                    "Low-carb" -> inputStream = getResources().openRawResource(R.raw.lowcarb)
+                    "Plant-based" -> inputStream = getResources().openRawResource(R.raw.plant)
                     "Paleo" -> inputStream = getResources().openRawResource(R.raw.paleo)
-                    "Mediterranean" -> inputStream = getResources().openRawResource(R.raw.mediterranian)
-                    "DASH" -> inputStream = getResources().openRawResource(R.raw.lowbloodpressure)
+                    "Mediterranean" -> inputStream = getResources().openRawResource(R.raw.medit)
+                    "DASH" -> inputStream = getResources().openRawResource(R.raw.dash)
                     else -> {}
                 }
                 reader = BufferedReader(InputStreamReader(inputStream, Charset.forName("UTF-8")))
@@ -88,19 +90,30 @@ class DietFragment : Fragment() {
                     chipgroup.addView(chip)
                     when (x) {
                         "Vegan" -> inputStream = getResources().openRawResource(R.raw.vegan)
-                        "Vegetarian" -> inputStream = getResources().openRawResource(R.raw.vegetarian)
+                        "Vegetarian" -> inputStream = getResources().openRawResource(R.raw.veget)
                         "Gluten-Free" -> inputStream = getResources().openRawResource(R.raw.gluten)
                         "Seafood-Free" -> inputStream = getResources().openRawResource(R.raw.dairy)
                         "Dairy-Free" -> inputStream = getResources().openRawResource(R.raw.dairy)
-                        "Soy-Free" -> inputStream = getResources().openRawResource(R.raw.soyfree)
-                        "Peanut-Free" -> inputStream = getResources().openRawResource(R.raw.peanutfree)
-                        "Wheat-Free" -> inputStream = getResources().openRawResource(R.raw.wheatfree)
+                        "Soy-Free" -> inputStream = getResources().openRawResource(R.raw.soy)
+                        "Peanut-Free" -> inputStream = getResources().openRawResource(R.raw.peanut)
+                        "Wheat-Free" -> inputStream = getResources().openRawResource(R.raw.wheat)
                         else -> {}
+                    }
+                    reader = BufferedReader(InputStreamReader(inputStream, Charset.forName("UTF-8")))
+                    reader.readLine()
+                    while(true){
+                        val nl = reader.readLine()
+                        if(nl == null){
+                            break
+                        }
+                        val token = nl.split(",")
+                        imagList.add(token[token.size-1])
+                        nameList.add(token[0])
                     }
                 }
             }
-            println(imagList)
-            println(nameList)
+//            println(imagList)
+//            println(nameList)
         }
 
         updateChip()

@@ -67,4 +67,3 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         viewHolder.itemCode2.text = code2[i]
     }
 }
-
